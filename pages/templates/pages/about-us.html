@@ -1,0 +1,118 @@
+{% extends 'main.html' %}
+{% load static %}
+{% static "" as baseUrl %}
+{% block content %}
+
+    <section class="banner-image">
+      <img src='{% static "/images/bannerImage.jpg" %}' alt="Banner Image"/>
+    </section>
+
+    <section class="page-nav">
+        <div class="container">
+            <p><a class="text-decoration-none" href="{% url 'index' %}">HOME </a><i class="fa-solid fa-angle-right mx-2"> About Us </i></p>
+        </div>
+    </section>
+
+
+    <section class="kala-incorp">
+        <div class="container">
+            <div class="kala-incorp__title text-center">
+                <h1>KALA GROUP</h1>
+            </div>
+            <div class="kala-incorp__desc">
+                <p>{{ about.description | safe }}</p>
+            </div>
+        </div>
+        <div class="kala-incorp__image">
+            <img src='{% static "/images/subsidiary-1.jpg" %}' alt="Kala Incorporated Image"/>
+        </div>
+    </section>
+
+    <section class="our-subsidiaries">
+      <div class="container">
+        <div class="our-subsidiaries__title text-center">
+          <h1>OUR <span>SUBSIDIARIES</span></h1>
+        </div>
+        <div class="our-subsidiaries__body">
+          <div class="row">
+
+            
+            {% for subsidiary in subsidiaries %}
+            <div class="col-lg-3">
+              <a class="text-decoration-none" href="{% url 'subsidiary' subsidiary.id %}">
+                <div class="body__card">
+                  <div class="gradient__image">
+                    <img src="{{ baseUrl }}/static/images/{{subsidiary.feature_image}}" alt="Subsidiary Image"/>
+                  </div>  
+                  <div class="card__inner">
+                    <h2>{{subsidiary.title}}</h2>
+                  </div>
+                </div>
+              </a>
+            </div>
+            {% endfor %}
+
+            <div class="col-lg-3">
+              <a class="text-decoration-none" href="https://www.escapenepal.com/">
+                <div class="body__card">
+                  <div class="gradient__image">
+                    <img src='{% static "/images/subsidiary-6.jpg" %}' alt="Subsidiary Image"/>
+                  </div>  
+                  <div class="card__inner">
+                    <h2>ESCAPE NEPAL AND HOLIDAYS PVT.LTD</h2>
+                    <span>TRAVEL AND TOURS</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+             
+          </div>
+        </div>
+      </div>
+    </section>
+
+      <section class="kala-incorp-gallery">
+        <div class="container">
+            <div class="gallery__title text-center">
+                <h1>GALLERY</h1>
+            </div>
+            <div class="gallery__body">
+                <div class="owl-carousel">
+
+                  {% if about.gallery_photo1 != "" %}
+                  <div class="gallery__image">
+                      <img src="{{ baseUrl }}/static/images/{{about.gallery_photo1}}"  alt="Gallery Image"/>
+                  </div>
+                  {% endif %}
+
+                  {% if about.gallery_photo2 != "" %}
+                  <div class="gallery__image">
+                      <img src="{{ baseUrl }}/static/images/{{about.gallery_photo2}}"  alt="Gallery Image"/>
+                  </div>
+                  {% endif %}
+
+                  {% if about.gallery_photo3 != "" %}
+                  <div class="gallery__image">
+                      <img src="{{ baseUrl }}/static/images/{{about.gallery_photo3}}"  alt="Gallery Image"/>
+                  </div>
+                  {% endif %}
+
+                  {% if about.gallery_photo4 != "" %}
+                  <div class="gallery__image">
+                      <img src="{{ baseUrl }}/static/images/{{about.gallery_photo4}}"  alt="Gallery Image"/>
+                  </div>
+                  {% endif %}
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="back-to-top-div">
+      <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
+        <img src='{% static "/images/backtotop.jpg" %}' alt="Back to top button"/>
+      </a>
+
+    </div>
+
+{% endblock content %}

@@ -1,0 +1,145 @@
+{% extends 'main.html' %}
+{% load static %}
+{% static "" as baseUrl %}
+{% block content %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script src='{% static "js/Carousel.js" %}'></script>
+
+    <section class="banner-image">
+      <img src='{% static "/images/bannerImage.jpg" %}' alt="Banner Image"/>
+    </section>
+
+    <section class="page-nav">
+        <div class="container">
+            <p><a class="text-decoration-none" href="{% url 'index' %}">HOME <i class="fa-solid fa-angle-right mx-2"></i></a><a class="text-decoration-none" href="{% url 'subsidiaries' %}">OUR SUBSIDIARIES </a> <i class="fa-solid fa-angle-right mx-2"> {{subsidiary.title}}</i></p>
+        </div>
+    </section>
+
+    <section class="kala-incorp">
+        <div class="container">
+            <div class="kala-incorp__title text-center">
+                <h1>{{subsidiary.title}}</h1>
+            </div>
+            <div class="kala-incorp__desc">
+                <p>{{subsidiary.description | safe}}</p>
+            </div>
+        </div>
+        <div class="kala-incorp__image">
+            <img src="{{ baseUrl }}/static/images/{{subsidiary.feature_image}}" alt="Kala Incorporated Image"/>
+        </div>
+    </section>
+
+    <section class="kala-incorp-gallery">
+        <div class="container">
+            <div class="gallery__title text-center">
+                <h1>GALLERY</h1>
+            </div>
+            <div class="gallery__body">
+                <div class="owl-carousel">
+                    {% if subsidiary.gallery1 != "" %}
+                    <div class="gallery__image">
+                        <img src="{{ baseUrl }}/static/images/{{subsidiary.gallery1}}"  alt="Gallery Image"/>
+                    </div>
+                    {% endif %}
+
+                    {% if subsidiary.gallery2 != "" %}
+                    <div class="gallery__image">
+                        <img src="{{ baseUrl }}/static/images/{{subsidiary.gallery2}}"  alt="Gallery Image"/>
+                    </div>
+                    {% endif %}
+
+                    {% if subsidiary.gallery3 != "" %}
+                    <div class="gallery__image">
+                        <img src="{{ baseUrl }}/static/images/{{subsidiary.gallery3}}"  alt="Gallery Image"/>
+                    </div>
+                    {% endif %}
+
+                    {% if subsidiary.gallery4 != "" %}
+                    <div class="gallery__image">
+                        <img src="{{ baseUrl }}/static/images/{{subsidiary.gallery4}}"  alt="Gallery Image"/>
+                    </div>
+                    {% endif %}
+
+                    {% if subsidiary.gallery5 != "" %}
+                    <div class="gallery__image">
+                        <img src="{{ baseUrl }}/static/images/{{subsidiary.gallery5}}"  alt="Gallery Image"/>
+                    </div>
+                    {% endif %}
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="kala-incorp-services">
+        <div class="container">
+            <div class="services__title text-center">
+                <h1>SERVICES</h1>
+            </div>
+            <div class="services__body">
+                <div class="service-top">
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                            <div class="service-top-right">
+                                <p>{{subsidiary.services | safe}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+  
+            </div>
+        </div>  
+    </section>
+
+
+    <section class="kala-incorp-gallery">
+        <div class="container">
+            <div class="gallery__title text-center">
+                <h1>Our Team</h1>
+            </div>
+            <div class="gallery__body">
+                <div class="owl-carousel">
+                    {% if subsidiary.teamMemberPhoto1 != "" %}
+                    <div class="gallery__image">
+                        <img src="{{ baseUrl }}/static/images/{{subsidiary.teamMemberPhoto1}}"  alt="Gallery Image"/>
+                        <p>{{subsidiary.teamMemberName1 | safe}}</p>
+                    </div>
+                    {% endif %}
+
+                    {% if subsidiary.teamMemberPhoto2 != "" %}
+                    <div class="gallery__image">
+                        <img src="{{ baseUrl }}/static/images/{{subsidiary.teamMemberPhoto2}}"  alt="Gallery Image"/>
+                        <p>{{subsidiary.teamMemberName2 | safe}}</p>
+                    </div>
+                    {% endif %}
+
+                    {% if subsidiary.teamMemberPhoto3 != "" %}
+                    <div class="gallery__image">
+                        <img src="{{ baseUrl }}/static/images/{{subsidiary.teamMemberPhoto3}}"  alt="Gallery Image"/>
+                        <p>{{subsidiary.teamMemberName3 | safe}}</p>
+                    </div>
+                    {% endif %}
+
+                    {% if subsidiary.teamMemberPhoto1 != "" %}
+                    <div class="gallery__image">
+                        <img src="{{ baseUrl }}/static/images/{{subsidiary.teamMemberPhoto4}}"  alt="Gallery Image"/>
+                        <p>{{subsidiary.teamMemberName4 | safe}}</p>
+                    </div>
+                    {% endif %}
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="back-to-top-div">
+      <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
+        <img src='{% static "/images/backtotop.jpg" %}' alt="Back to top button"/>
+      </a>
+
+    </div>
+
+
+{% endblock content %}

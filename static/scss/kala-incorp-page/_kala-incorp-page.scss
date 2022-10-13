@@ -1,0 +1,232 @@
+.page-nav {
+    margin-bottom: 88px;
+    margin-top: 30px;
+    p {
+        font-size: 16px;
+
+        a {
+            color: #2b2b2b;
+            i {
+                color: #079b00;
+            }
+        }
+    }
+}
+
+
+.kala-incorp {
+    .kala-incorp__title {
+        margin-bottom: 26px;
+        h1 {
+            color: #079b00;
+            font-weight: 700;
+        }
+    }
+
+    .kala-incorp__desc {
+        margin-bottom: 26px;
+            p {
+                text-align: justify;
+            }
+    }
+    .kala-incorp__image {
+        margin-bottom: 88px;
+        img {
+            width: 100%;
+            height: 513px;
+            object-fit: cover;
+        }
+        
+    }
+
+    
+}
+
+.kala-incorp-gallery {
+    margin-bottom: 88px;
+    .gallery__title {
+        margin-bottom: 26px;
+        h1 {
+            color: #079b00;
+            font-weight: 700;
+        }
+    }
+
+
+
+    .gallery__body {
+        .gallery__image {
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.kala-incorp-services {
+    .services__title {
+        margin-bottom: 26px;
+        h1 {
+            color: #079b00;
+            font-weight: 700;
+        }
+    }
+
+    .services__body {
+        .service-top {
+            margin-bottom: 30px;
+            .service-top-left {
+                img {
+                    width: 100%;
+                    height: 620px;
+                    object-fit: cover;
+                }
+            }
+            .service-top-right {
+                margin: 14% 0px;
+                p {
+                    font-size: 16px;
+                    text-align: justify;
+                    font-weight: normal;
+                }
+            }
+        }
+
+        #service-mid-1 {
+            margin-bottom: 30px;
+            .mobile-view {
+                display: none;
+                    img {
+                        width: 100%;
+                        height: 620px;
+                        object-fit: cover;
+                    }
+            }
+            
+            
+            #service-mid-1-left {
+                margin: 14% 0px;
+                p {
+                    font-size: 18px;
+                    text-align: justify;
+                    font-weight: normal;
+                }
+            }
+            #service-mid-1-right {
+                img {
+                    width: 100%;
+                    height: 620px;
+                    object-fit: cover;
+                }
+            }
+            
+        }
+
+        #service-mid-2 {
+            margin-bottom: 30px;
+            #service-mid-2-left {
+                img {
+                    width: 100%;
+                    height: 620px;
+                    object-fit: cover;
+                }
+            }
+            #service-mid-2-right {
+                margin: 14% 0px;
+                p {
+                    font-size: 18px;
+                    text-align: justify;
+                    font-weight: normal;
+                }
+                
+            }
+        }
+
+        .service-bottom {
+
+            .mobile-view {
+                display: none;
+                    img {
+                        width: 100%;
+                        height: 620px;
+                        object-fit: cover;
+                        
+                    }
+            }
+
+            .service-bottom-left {
+                margin: 14% 0px;
+                p {
+                    font-size: 18px;
+                    text-align: justify;
+                    font-weight: normal;
+                }
+                
+            }
+            .service-bottom-right {
+                img {
+                    width: 100%;
+                    height: 620px;
+                    object-fit: cover;
+                }
+                
+            }
+        }
+
+        
+    }
+
+    @media screen and (max-width: 600px) {
+        
+        #service-mid-1 {
+            .mobile-view {
+                display: unset !important;
+            }
+        }
+
+        #service-mid-1-right {
+            display: none;
+        }
+
+        .service-bottom {
+            .mobile-view {
+                display: unset !important;
+            }
+        }
+
+        .service-bottom-right {
+            display: none;
+        }
+
+    }
+
+    @media screen and (max-width: 912px) {
+        .service-top {
+            .service-top-right {
+                margin: 0px 0px !important;
+            }
+        }
+
+        #service-mid-1 {
+            #service-mid-1-left {
+                margin: 0px 0px !important;
+            }
+        }
+
+        #service-mid-2 {
+            #service-mid-2-right {
+                margin: 0px 0px !important;
+            }
+        }
+
+        .service-bottom {
+            .service-bottom-left {
+                margin: 0px 0px !important;
+            }
+        }
+    }
+}
+
+
+
+// 620

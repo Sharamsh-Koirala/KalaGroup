@@ -1,0 +1,44 @@
+.blogs {
+    .blogs-page__title {
+        margin-bottom: 50px;
+        position: relative;
+        h1 {
+            color: #079b00;
+            font-size: 40px;
+            font-weight: 700;
+            margin-left: 199px;
+                &::after {
+                    content: "";
+                    background: #079b00;
+                    position: absolute;
+                    display: block;
+                    height: 5px;
+                    width: 80px;
+                    bottom: -14px;
+                    left: calc(48% - 25px);
+                }
+        }
+
+
+    }
+
+    @media screen and (max-width: 912px) {
+        .blogs-page__title {
+            h1 {
+                text-align: start;
+                margin-left: 0px;
+                    &::after {
+                        display: none;
+                    }
+            }
+        }
+    }
+
+    @media screen and (width: 1024px) {
+        .blogs-page__title {
+            h1 {
+                margin-left: 157px;
+            }
+        }
+    }
+}

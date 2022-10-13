@@ -1,0 +1,112 @@
+.our-subsidiaries {
+    .our-subsidiaries__title {
+        margin-bottom: 30px;
+        h1 {
+            color: #2b2b2b;
+            font-size: 40px;
+                span {
+                    color: #079b00;
+                }
+        }
+    }
+
+    .our-subsidiaries__body {
+            margin-bottom: 88px;
+            a {
+                .body__card {
+                    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+                    position: relative;                    
+
+                    .gradient__image {
+                        background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+                        width: 100%;
+                        height: 286px;
+                            img {
+                                position: relative;
+                                width: 100%;
+                                height: 286px;
+                                z-index: -1;
+                                display: block;
+                            }
+                    }
+
+                        .card__inner {
+                            color: #fff;
+                            position: absolute;
+                            bottom: 24px;
+                            left: 18px;
+                            h2 {
+                                font-size: 16px;
+                                font-weight: 600;
+                                margin-bottom: 0px;
+                            }
+                            span {
+                                font-size: 10px;
+                            }
+                        }
+                }
+            }
+
+            a {
+                #body__card-4 {
+                    margin-left: 50%;
+                    width: 100%;
+                }
+            }
+
+            a {
+                #body__card-5 {
+                    margin-left: 50%;
+                    width: 100%;
+                }
+            }
+
+            a {
+                #body__card-6 {
+                    margin-left: 50%;
+                    width: 100%;
+                }
+            }
+
+    }
+
+    
+
+    @media screen and (max-width: 912px) {
+        .our-subsidiaries__body {
+                a {
+                    .body__card {
+                            margin-bottom: 40px;
+                            .card__inner {
+                                
+                                    h2 {
+                                        font-size: 25px;
+                                    }
+
+                                    span {
+                                        font-size: 15px;
+                                    }
+                            }
+                    }
+                }
+
+                a {
+                    #body__card-4 {
+                        margin-left: 0px;
+                    }
+                }
+
+                a {
+                    #body__card-5 {
+                        margin-left: 0px;
+                    }
+                }
+
+                a {
+                    #body__card-6 {
+                        margin-left: 0px;
+                    }
+                }
+        }
+    }
+}

@@ -1,0 +1,163 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+    <section class="banner-image">
+      <img src='{% static "/images/image-1.jpg" %}' alt="Banner Image"/>
+    </section>
+
+    <section class="page-nav">
+        <div class="container">
+            <p><a class="text-decoration-none" href="{% url 'index' %}">HOME</a><i class="fa-solid fa-angle-right mx-2"> Services </i></p>
+        </div>
+    </section>
+
+    
+
+    <section class="kala-incorp-services">
+        <div class="container">
+            <div class="services__title text-center">
+                <h1>SERVICES</h1>
+            </div>
+            <div class="services__body">
+                <div class="service-top">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                            <div class="service-top-left">
+                                <img src='{% static "/images/subsidiary-1.jpg" %}' alt="Service Image"/>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                            <div class="service-top-right">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                    Enim vel adipiscing eget quis ac eget sagittis. Nunc massa 
+                                    lectus urna, purus mi et vitae. Gravida lectus proin 
+                                    senectus nisi, aliquet nec dignissim auctor. Lorem ipsum 
+                                    dolor sit amet, consectetur adipiscing elit. Lorem ipsum 
+                                    dolor sit amet, consectetur adipiscing elit. Enim vel 
+                                    adipiscing eget quis ac eget sagittis. Nunc massa lectus 
+                                    urna, purus mi et vitae. Gravida lectus proin senectus nisi, 
+                                    aliquet nec dignissim auctor. Lorem ipsum dolor sit amet, 
+                                    consectetur adipiscing elit. Nunc massa lectus urna, purus 
+                                    mi et vitae. Gravida lectus proin senectus nisi, aliquet nec 
+                                    dignissim auctor. Lorem ipsum dolor sit amet, consectetur 
+                                    adipiscing elit. Nunc massa lectus urna, purus mi et vitae. 
+                                    Gravida lectus proin senectus nisi, aliquet nec dignissim 
+                                    auctor. Lorem ipsum dolor sit amet, consectetur adipiscing 
+                                    elit.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="service-mid-1" class="service-mid">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 mobile-view">
+                            <img class="mobile-view-img" src='{% static "/images/bannerImage.jpg" %}' />
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">                            
+                            <div id="service-mid-1-left" class="service-mid-left">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                    Enim vel adipiscing eget quis ac eget sagittis. Nunc massa 
+                                    lectus urna, purus mi et vitae. Gravida lectus proin 
+                                    senectus nisi, aliquet nec dignissim auctor. Lorem ipsum 
+                                    dolor sit amet, consectetur adipiscing elit. Lorem ipsum 
+                                    dolor sit amet, consectetur adipiscing elit. Enim vel 
+                                    adipiscing eget quis ac eget sagittis. Nunc massa lectus 
+                                    urna, purus mi et vitae. Gravida lectus proin senectus nisi, 
+                                    aliquet nec dignissim auctor. Lorem ipsum dolor sit amet, 
+                                    consectetur adipiscing elit. Nunc massa lectus urna, purus 
+                                    mi et vitae. Gravida lectus proin senectus nisi, aliquet nec 
+                                    dignissim auctor. Lorem ipsum dolor sit amet, consectetur 
+                                    adipiscing elit. Nunc massa lectus urna, purus mi et vitae. 
+                                    Gravida lectus proin senectus nisi, aliquet nec dignissim 
+                                    auctor. </p>
+                            </div>
+                            
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                            <div id="service-mid-1-right" class="service-mid-right">
+                                <img src='{% static "/images/bannerImage.jpg" %}' alt="Service Image"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="service-mid-2" class="service-mid">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                            <div id="service-mid-2-left" class="service-mid-left">
+                                <img src='{% static "/images/subsidiary-3.jpg" %}' alt="Service Image"/>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                            <div id="service-mid-2-right" class="service-mid-right">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                    Enim vel adipiscing eget quis ac eget sagittis. Nunc massa 
+                                    lectus urna, purus mi et vitae. Gravida lectus proin 
+                                    senectus nisi, aliquet nec dignissim auctor. Lorem ipsum 
+                                    dolor sit amet, consectetur adipiscing elit. Lorem ipsum 
+                                    dolor sit amet, consectetur adipiscing elit. Enim vel 
+                                    adipiscing eget quis ac eget sagittis. Nunc massa lectus 
+                                    urna, purus mi et vitae. Gravida lectus proin senectus nisi, 
+                                    aliquet nec dignissim auctor. Lorem ipsum dolor sit amet, 
+                                    consectetur adipiscing elit. Nunc massa lectus urna, purus 
+                                    mi et vitae. Gravida lectus proin senectus nisi, aliquet nec 
+                                    dignissim auctor. Lorem ipsum dolor sit amet, consectetur 
+                                    adipiscing elit. Nunc massa lectus urna, purus mi et vitae. 
+                                    Gravida lectus proin senectus nisi, aliquet nec dignissim 
+                                    auctor. Lorem ipsum dolor sit amet, consectetur adipiscing 
+                                    elit.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-bottom">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 mobile-view">
+                            <img class="mobile-view-img" src='{% static "/images/subsidiary-3.jpg" %}' />
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                            <div class="service-bottom-left">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                    Enim vel adipiscing eget quis ac eget sagittis. Nunc massa 
+                                    lectus urna, purus mi et vitae. Gravida lectus proin 
+                                    senectus nisi, aliquet nec dignissim auctor. Lorem ipsum 
+                                    dolor sit amet, consectetur adipiscing elit. Lorem ipsum 
+                                    dolor sit amet, consectetur adipiscing elit. Enim vel 
+                                    adipiscing eget quis ac eget sagittis. Nunc massa lectus 
+                                    urna, purus mi et vitae. Gravida lectus proin senectus nisi, 
+                                    aliquet nec dignissim auctor. Lorem ipsum dolor sit amet, 
+                                    consectetur adipiscing elit. Nunc massa lectus urna, purus 
+                                    mi et vitae. Gravida lectus proin senectus nisi, aliquet nec 
+                                    dignissim auctor. Lorem ipsum dolor sit amet, consectetur 
+                                    adipiscing elit. Nunc massa lectus urna, purus mi et vitae. 
+                                    Gravida lectus proin senectus nisi, aliquet nec dignissim 
+                                    auctor. Lorem ipsum dolor sit amet, consectetur adipiscing 
+                                    elit.</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                            <div class="service-bottom-right">
+                                <img src='{% static "/images/subsidiary-3.jpg" %}' alt="Service Image"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+        
+    </section>
+
+
+    <div class="back-to-top-div">
+      <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
+        <img src='{% static "/images/backtotop.jpg" %}' alt="Back to top button"/>
+      </a>
+
+    </div>
+
+{% endblock content %}
